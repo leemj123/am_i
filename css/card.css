@@ -1,0 +1,73 @@
+/* 기본 모달 오버레이 스타일 */
+#card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+/* 모달 컨텐츠 애니메이션 */
+#card-content {
+    display: flex;
+    background-color: white;
+    width: 90%;
+    max-width: 350px;
+    height: 90%;
+    max-height: 500px;
+    border-radius: 10px;
+    transform: translateY(50%);
+    transition: transform 0.4s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%, 20% 96%, 10% 100%, 0 100%);
+}
+}
+.barcode {
+    z-index: 300;
+    background-color: rgba(255, 255, 255, 0.26);
+    position: relative;
+    width: 27%;
+    height: 100%;
+    margin-left: 10%;
+}
+.card-text-area {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#close-card {
+     font-size: x-large;
+     position: absolute;
+     top: 0;
+     right: 0;
+     padding: 10px;
+     cursor: pointer;
+ }
+#close-card:hover {
+    color: red;
+}
+/* 모달이 열릴 때 스타일 */
+#card.show {
+    opacity: 1;
+    z-index: 99;
+    visibility: visible;
+}
+#card.show #card-content {
+    transform: translateY(0);
+}
+
+/* 모달이 닫힐 때 스타일 */
+#card.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease 0.4s; /* 컨텐츠 애니메이션 후에 변경 */
+}
+#card.hide #card-content {
+    transform: translateY(50%);
+}

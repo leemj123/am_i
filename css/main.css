@@ -1,0 +1,24 @@
+/* 전체 페이지 설정 */
+body {
+    height: 100vh; /* 화면 높이를 전체 뷰포트 높이로 설정 */
+    margin: 0; /* 바깥 여백 제거 */
+    padding: 0; /* 안쪽 여백 제거 */
+}
+
+.none-deco {
+    text-decoration: none;
+    color: white;
+}
+footer {
+    color: #3a434e;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3px 10px;
+    z-index: 100;
+}

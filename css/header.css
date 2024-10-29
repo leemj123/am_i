@@ -1,0 +1,41 @@
+/* Header 스타일 */
+.header {
+    color: #404040;
+    z-index: 99;
+}
+.header-container {
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+    margin: 0 auto;
+    padding: 10px 10px;
+    z-index: 99;
+}
+.logo {
+    font-size: 30px;
+    margin: 0 5px;
+}
+.nav {
+    padding-right: 5%;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #404040;
+    font-size: 20px;
+    text-decoration: none;
+}
+.nav .button:hover {
+    background-color: #3a434e; /* 호버 시 어두운 색상 */
+}
+#open-card:hover{
+    cursor: pointer;
+}
